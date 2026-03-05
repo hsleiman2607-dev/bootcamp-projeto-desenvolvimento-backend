@@ -45,7 +45,7 @@ model Oferta {
   categoria    Categoria @relation(fields: [categoria_ID], references: [CatID])
   
   pessoa_ID    Int
-  pessoa       Pessoa    @relation(fields: [pessoa_ID], references: [PesID])
+  pessoa       Pessoa    @relation(fields: [pessoa_ID], references: [PesID],onDelete: Cascade)
 
   @@map("ofertas")
 }
